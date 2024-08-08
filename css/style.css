@@ -156,7 +156,6 @@ body {
 }
 .nav {
   display: flex;
-
   list-style: none;
   padding: 0;
   margin: 0;
@@ -527,14 +526,9 @@ body {
   color: var(--accent-color);
   text-transform: uppercase;
 }
-
-@media screen and (max-width: 768px) {
-  .contacts__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .contacts__items {
-    max-width: 100%;
-  }
+.contacts__h3-accent a {
+  text-decoration: none;
+  color: var(--accent-color);
 }
 /**************************************************************** Секция:Footer**************************************************************/
 
@@ -552,7 +546,56 @@ body {
 .footer__brand {
 }
 
+@media screen and (max-width: 480px) {
+  .h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .burger {
+    width: 100%;
+    font-size: 12px;
+  }
+  .header_title {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contacts__items {
+    max-width: 100%;
+  }
+  .header {
+    min-height: 500px;
+  }
+  .header_title {
+    flex-direction: column;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav li a {
+    padding: 5px 0;
+  }
+  .news_items {
+    width: 100%;
+  }
+  .menu_inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-text {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
+  .contacts__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .container {
     padding: 0 15px;
   }
@@ -570,38 +613,5 @@ body {
   .keys-image {
     width: 100%;
     height: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    min-height: 500px;
-  }
-  .header_title {
-    flex-direction: column;
-  }
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav li a {
-    padding: 5px 0;
-  }
-  .news_items {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-  .burger {
-    width: 100%;
-    font-size: 12px;
-  }
-  .header_title {
-    align-items: center;
   }
 }
