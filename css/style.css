@@ -71,7 +71,6 @@ body {
 }
 /**************************************************************** Секция:Шапка***********************************************/
 .header {
-  min-height: 740px;
 }
 .header_title {
   padding-top: 10px;
@@ -117,7 +116,7 @@ body {
 }
 .h1 {
   font-weight: 500;
-  font-size: 64px;
+  font-size: 35px;
   line-height: 95px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -558,11 +557,15 @@ body {
   .header_title {
     align-items: center;
   }
+  .reviews__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .contacts__grid {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
   }
   .contacts__items {
     max-width: 100%;
@@ -590,6 +593,19 @@ body {
   .logo-text {
     margin-bottom: 20px;
   }
+  .request_flex {
+    flex-direction: column;
+  }
+  .request_h5 {
+    text-align: center;
+  }
+  .request_h4 {
+    text-align: center;
+  }
+  .information__flex {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -599,9 +615,7 @@ body {
   .container {
     padding: 0 15px;
   }
-  .header {
-    min-height: 600px;
-  }
+
   .keys__flex {
     flex-direction: column;
     align-items: center;
@@ -613,5 +627,12 @@ body {
   .keys-image {
     width: 100%;
     height: auto;
+  }
+  .text-h3 {
+    text-align: center;
+  }
+  .contacts__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 0px;
   }
 }
